@@ -1,4 +1,4 @@
-package com.umang.triangaleview
+package com.umang.unreadindicator
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

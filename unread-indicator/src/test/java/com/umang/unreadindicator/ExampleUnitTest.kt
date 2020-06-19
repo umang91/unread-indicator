@@ -1,4 +1,4 @@
-package com.umang.triangaleview
+package com.umang.unreadindicator
 
 import org.junit.Test
 

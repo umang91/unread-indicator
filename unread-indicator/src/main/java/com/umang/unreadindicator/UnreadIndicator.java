@@ -1,4 +1,4 @@
-package com.umang.triangaleview;
+package com.umang.unreadindicator;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -14,23 +14,23 @@ import androidx.annotation.Nullable;
  * @author Umang Chamaria
  * Date: 19/06/20
  */
-public class TriangleView extends View {
+public class UnreadIndicator extends View {
 
   private int color;
   private Path path = new Path();
   private Paint paint = new Paint();
 
-  public TriangleView(Context context) {
+  public UnreadIndicator(Context context) {
     this(context, null);
   }
 
-  public TriangleView(Context context,
+  public UnreadIndicator(Context context,
       @Nullable AttributeSet attrs) {
     super(context, attrs);
     getXmlAttrs(context, attrs);
   }
 
-  public TriangleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+  public UnreadIndicator(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
     getXmlAttrs(context, attrs);
   }
@@ -55,10 +55,10 @@ public class TriangleView extends View {
 
   private void getXmlAttrs(Context context, AttributeSet attrs) {
     TypedArray a =
-        context.getTheme().obtainStyledAttributes(attrs, R.styleable.TriangleView, 0, 0);
+        context.getTheme().obtainStyledAttributes(attrs, R.styleable.UnreadIndicator, 0, 0);
     try {
       color =
-          a.getInteger(R.styleable.TriangleView_triangleColor, Color.rgb(0x61, 0x61, 0x61));
+          a.getInteger(R.styleable.UnreadIndicator_triangleColor, Color.rgb(0x61, 0x61, 0x61));
     } finally {
       a.recycle();
     }
