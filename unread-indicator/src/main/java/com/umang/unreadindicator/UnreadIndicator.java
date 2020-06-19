@@ -58,7 +58,7 @@ public class UnreadIndicator extends View {
         context.getTheme().obtainStyledAttributes(attrs, R.styleable.UnreadIndicator, 0, 0);
     try {
       color =
-          a.getInteger(R.styleable.UnreadIndicator_triangleColor, Color.rgb(0x61, 0x61, 0x61));
+          a.getInteger(R.styleable.UnreadIndicator_indicatorColor, Color.rgb(0x61, 0x61, 0x61));
     } finally {
       a.recycle();
     }
