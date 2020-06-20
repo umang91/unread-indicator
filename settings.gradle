@@ -1,3 +1,2 @@
 include ':unread-indicator'
 include ':example'
-rootProject.name = "TriangleView"
