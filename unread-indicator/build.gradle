@@ -1,6 +1,35 @@
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+
+def versionMeta = rootProject.ext.versionMeta
+ext {
+  def bintrayMeta = rootProject.ext.bintrayMeta
+
+  bintrayRepo = bintrayMeta.bintrayRepo
+  bintrayName = bintrayMeta.bintrayName
+  publishedGroupId = bintrayMeta.publishedGroupId
+  libraryName = bintrayMeta.libraryName
+  artifact = bintrayMeta.artifact
+  libraryDescription = bintrayMeta.libraryDescription
+
+  def urlMeta = rootProject.ext.urlMeta
+
+  siteUrl = urlMeta.siteUrl
+  gitUrl = urlMeta.gitUrl
+
+  libraryVersion = versionMeta.versionName
+
+  def developerMeta = rootProject.ext.developerMeta
+
+  developerId = developerMeta.developerId
+  developerName = developerMeta.developerName
+  developerEmail = developerMeta.developerEmail
+
+  def licenseMeta = rootProject.ext.licenseMeta
+
+  licenseName = licenseMeta.licenseName
+  licenseUrl = licenseMeta.licenseUrl
+  allLicenses = licenseMeta.allLicenses
+}
 
 android {
   compileSdkVersion 29
@@ -9,8 +38,8 @@ android {
   defaultConfig {
     minSdkVersion 16
     targetSdkVersion 29
-    versionCode 1
-    versionName "1.0"
+    versionCode versionMeta.versionCode
+    versionName versionMeta.versionName
 
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     consumerProguardFiles "consumer-rules.pro"
@@ -30,3 +59,6 @@ dependencies {
   androidTestImplementation 'androidx.test.ext:junit:1.1.1'
   androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+
+apply from: "https://raw.githubusercontent.com/umang91/jcenterScripts/master/installv.gradle"
+apply from: "https://raw.githubusercontent.com/umang91/jcenterScripts/master/bintray-java.gradle"
