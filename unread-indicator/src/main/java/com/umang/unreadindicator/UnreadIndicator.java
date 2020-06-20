@@ -8,7 +8,6 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.View;
-import androidx.annotation.Nullable;
 
 /**
  * @author Umang Chamaria
@@ -24,13 +23,12 @@ public class UnreadIndicator extends View {
     this(context, null);
   }
 
-  public UnreadIndicator(Context context,
-      @Nullable AttributeSet attrs) {
+  public UnreadIndicator(Context context, AttributeSet attrs) {
     super(context, attrs);
     getXmlAttrs(context, attrs);
   }
 
-  public UnreadIndicator(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+  public UnreadIndicator(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
     getXmlAttrs(context, attrs);
   }
