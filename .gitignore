@@ -14,3 +14,5 @@
 .externalNativeBuild
 .cxx
 release_properties.gradle
+/buildSrc/.gradle
+/buildSrc/build

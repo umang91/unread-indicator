@@ -1,5 +1,5 @@
 
-![Download](https://api.bintray.com/packages/umangchamaria/umang/unread-indicator/images/download.svg)
+![MavenCentral](https://maven-badges.herokuapp.com/maven-central/dev.assemblage/unread-indicator/badge.svg)
 
 # Unread Indicator
 A custom view which can be used to show an un-read indicator on the top right corner.
@@ -14,7 +14,7 @@ The indicator is drawn as a triangle in half the area of the specified height an
 Add the below line in the dependency block of your app's `build.gradle`
 
 ```groovy
-implementation("com.umang:unread-indicator:$sdkVersion")
+implementation("dev.assemblage:unread-indicator:$sdkVersion")
 ```
 replace `$sdkVersion` with the latest version of the SDK
 
