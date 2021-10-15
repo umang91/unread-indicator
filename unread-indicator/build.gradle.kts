@@ -1,21 +1,24 @@
+import java.io.FileInputStream
+import java.util.*
+
 plugins {
   id("com.android.library")
 }
 
-ext {
-  set(PomKeys.artifactId, ReleaseConfig.artifactId)
-  set(PomKeys.description, ReleaseConfig.description)
-  set(PomKeys.name, ReleaseConfig.artifactName)
-  set(PomKeys.versionName, ReleaseConfig.versionName)
+fun getVersionName(): String {
+  val properties = Properties()
+  properties.load(FileInputStream("./unread-indicator/gradle.properties"))
+  return properties.getProperty("VERSION_NAME") ?: throw GradleException(
+    "VERSION_NAME not found in ./unread-indicator/gradle.properties"
+  )
 }
 
-
 android {
-  compileSdkVersion(29)
+  compileSdk = 29
 
   defaultConfig {
-    minSdkVersion(16)
-    targetSdkVersion(29)
+    minSdk = 16
+    targetSdk = 29
     consumerProguardFiles("consumer-rules.pro")
   }
 
