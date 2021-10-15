@@ -1,4 +1,4 @@
-## 2.0.0
+## 2.0.0 (16-10-2021)
 - Build Configuration Updated
   - Minimum SDK version updated to API level 21
   - Compile SDK version updated to API level 30
