@@ -5,20 +5,12 @@ plugins {
   id("com.android.library")
 }
 
-fun getVersionName(): String {
-  val properties = Properties()
-  properties.load(FileInputStream("./unread-indicator/gradle.properties"))
-  return properties.getProperty("VERSION_NAME") ?: throw GradleException(
-    "VERSION_NAME not found in ./unread-indicator/gradle.properties"
-  )
-}
-
 android {
-  compileSdk = 29
+  compileSdk = 30
 
   defaultConfig {
-    minSdk = 16
-    targetSdk = 29
+    minSdk = 21
+    targetSdk = 30
     consumerProguardFiles("consumer-rules.pro")
   }
 
